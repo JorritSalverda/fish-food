@@ -1,18 +1,24 @@
 local name = "infinity"
-local version = "0.2.19"
+local version = "0.2.22"
+local description = "Infinity is a CLI to easily build your applications using a pipeline as code"
+local homepage = "https://github.com/JorritSalverda/infinity"
+local repository = "https://github.com/JorritSalverda/infinity"
+local darwinSha256 = "ec960d0ec8091b06421ffcd665f7a9b602a954b4cbd90b897d64465225474902"
+local linuxSha256 = "f6f9240689578b89e0e117066bbc8977f6e461bb5281e6713b9ac280b59c3bdf"
+local windowsSha256 = "6db7f4321129cbb725ba80f4602552352bef34fd4b1d1dfc7409523a1afda91c"
 
 food = {
     name = name,
-    description = "Infinity is a CLI to easily build your applications using a pipeline as code",
-    homepage = "https://github.com/JorritSalverda/infinity",
+    description = description,
+    homepage = homepage,
     version = version,
     packages = {
         {
             os = "darwin",
             arch = "amd64",
-            url = "https://github.com/JorritSalverda/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-v" .. version .. "-darwin-amd64.zip",
+            url = repository .. "/releases/download/v" .. version .. "/" .. name .. "-v" .. version .. "-darwin-amd64.zip",
             -- shasum of the release archive
-            sha256 = "9b7a2f79a7ede4f1bbfe203d69bbfb31f682ffdb0e87a802f5a20e5306919d88",
+            sha256 = darwinSha256,
             resources = {
                 {
                     path = name .. "-v" .. version .. "-darwin-amd64",
@@ -24,12 +30,12 @@ food = {
         {
             os = "linux",
             arch = "amd64",
-            url = "https://github.com/JorritSalverda/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-v" .. version .. "-linux-amd64.zip",
+            url = repository .. "/releases/download/v" .. version .. "/" .. name .. "-v" .. version .. "-linux-amd64.zip",
             -- shasum of the release archive
-            sha256 = "4b0df86293982de965ed46ba56f734cb9f870922ea28244e581bf9ff4a86b341",
+            sha256 = linuxSha256,
             resources = {
                 {
-                    path = name,
+                    path = name .. "-v" .. version .. "-linux-amd64",
                     installpath = "bin/" .. name,
                     executable = true
                 }
@@ -38,12 +44,12 @@ food = {
         {
             os = "windows",
             arch = "amd64",
-            url = "https://github.com/JorritSalverda/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-v" .. version .. "windows-amd64.zip",
+            url = repository .. "/releases/download/v" .. version .. "/" .. name .. "-v" .. version .. "windows-amd64.zip",
             -- shasum of the release archive
-            sha256 = "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+            sha256 = windowsSha256,
             resources = {
                 {
-                    path = name .. ".exe",
+                    path = name .. "-v" .. version .. "-windows-amd64" .. ".exe",
                     installpath = "bin\\" .. name .. ".exe"
                 }
             }
