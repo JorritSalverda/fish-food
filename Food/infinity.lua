@@ -1,11 +1,11 @@
 local name = "infinity"
-local version = "0.2.24"
+local version = "0.2.31"
 local description = "Infinity is a CLI to easily build your applications using a pipeline as code"
 local homepage = "https://github.com/JorritSalverda/infinity"
 local repository = "https://github.com/JorritSalverda/infinity"
-local darwinSha256 = "fb18f77153823d7b02b211e9a6fe49ee70dc87118c1c56bd27ad41d3fdbcb105"
-local linuxSha256 = "62db3c3509ad69fdd9d232abbf4748d8a0cf72609b23244f520e61347e9a9b57"
-local windowsSha256 = "2dbead2846fbd906fa1695f465c5f217b799fbe29df74c0cc4bdc7e54826e596"
+local darwinSha256 = "4569aa2085b887749558ddc10a53b50883cc65dfa8583b3395767405d92e1291"
+local linuxSha256 = "a1437ea3f55825c416372dff5c75fc813dfa0a9893962a6a35bdca3969fed0e6"
+local windowsSha256 = "f0b10f0043db80b45b278589988fa67421c93060083ca769dd5a77af74edf9ce"
 
 food = {
     name = name,
